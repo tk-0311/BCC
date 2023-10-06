@@ -1,0 +1,161 @@
+Last login: Tue Sep 26 17:44:58 on ttys004
+tk-0311 ADT $ c++ index.cpp
+tk-0311 ADT $ ./a.out      
+
+ 1. get_matrix 
+ 2. get_scaler 
+ 3. calc_sum 
+ 4. calc_diff 
+ 5. scalar_mult 
+ 6. calc_prod 
+ 7. calc_inv 
+ 8. print_matrix 
+ 9. EXIT program 
+Select operation to conduct 1 - 9 => 
+1
+Get MatrixMatrix 1: 
+Input name of Matrix: a 
+
+Input value for (1, 1): 1
+
+Input value for (2, 1): 2
+
+Input value for (1, 2): 3
+
+Input value for (2, 2): 4
+
+Matrix 2: 
+Input name of Matrix:b
+
+Input value for (1, 1): 1
+
+Input value for (2, 1): 2
+
+Input value for (1, 2): 3
+
+Input value for (2, 2): 4
+
+ 1. get_matrix 
+ 2. get_scaler 
+ 3. calc_sum 
+ 4. calc_diff 
+ 5. scalar_mult 
+ 6. calc_prod 
+ 7. calc_inv 
+ 8. print_matrix 
+ 9. EXIT program 
+Select operation to conduct 1 - 9 => 
+2
+Get ScalarEnter scalar value :
+2
+
+ 1. get_matrix 
+ 2. get_scaler 
+ 3. calc_sum 
+ 4. calc_diff 
+ 5. scalar_mult 
+ 6. calc_prod 
+ 7. calc_inv 
+ 8. print_matrix 
+ 9. EXIT program 
+Select operation to conduct 1 - 9 => 
+3
+
+ Matrix Name : 
+( 2 )( 6 )
+( 4 )( 8 )
+
+ 1. get_matrix 
+ 2. get_scaler 
+ 3. calc_sum 
+ 4. calc_diff 
+ 5. scalar_mult 
+ 6. calc_prod 
+ 7. calc_inv 
+ 8. print_matrix 
+ 9. EXIT program 
+Select operation to conduct 1 - 9 => 
+4
+
+ Matrix Name : 
+( 0 )( 0 )
+( 0 )( 0 )
+
+ 1. get_matrix 
+ 2. get_scaler 
+ 3. calc_sum 
+ 4. calc_diff 
+ 5. scalar_mult 
+ 6. calc_prod 
+ 7. calc_inv 
+ 8. print_matrix 
+ 9. EXIT program 
+Select operation to conduct 1 - 9 => 
+5
+
+ Select the Matrix 
+1. a
+ 2. b
+
+ Matrix Name : 
+( 2 )( 6 )
+( 4 )( 8 )
+
+ Matrix Name : 
+( 2 )( 6 )
+( 4 )( 8 )
+
+ 1. get_matrix 
+ 2. get_scaler 
+ 3. calc_sum 
+ 4. calc_diff 
+ 5. scalar_mult 
+ 6. calc_prod 
+ 7. calc_inv 
+ 8. print_matrix 
+ 9. EXIT program 
+Select operation to conduct 1 - 9 => 
+6
+
+ Matrix Name : 
+( 7 )( 15 )
+( 10 )( 22 )
+
+ 1. get_matrix 
+ 2. get_scaler 
+ 3. calc_sum 
+ 4. calc_diff 
+ 5. scalar_mult 
+ 6. calc_prod 
+ 7. calc_inv 
+ 8. print_matrix 
+ 9. EXIT program 
+Select operation to conduct 1 - 9 => 
+8
+Printing Matrix...
+
+ Matrix Name : a
+( 1 )( 3 )
+( 2 )( 4 )
+
+ Matrix Name : b
+( 1 )( 3 )
+( 2 )( 4 )
+
+ Matrix Name : 
+( 7 )( 15 )
+( 10 )( 22 )
+
+ 1. get_matrix 
+ 2. get_scaler 
+ 3. calc_sum 
+ 4. calc_diff 
+ 5. scalar_mult 
+ 6. calc_prod 
+ 7. calc_inv 
+ 8. print_matrix 
+ 9. EXIT program 
+Select operation to conduct 1 - 9 => 
+9
+Exiting the program
+tk-0311 ADT $ 

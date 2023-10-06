@@ -1,0 +1,135 @@
+Program library 
+Namespace 
+Initialize structure Matrix 
+    Set int row1 [2]
+    Set int row2[2]
+    String name 
+End 
+Set function get matrix (struct matrix m )
+Set function get scalar (int k)
+Set function calculate sum (matrix, matrix, matrix )
+Set function calc sum(matrix, matrix, matrix )
+Set function scalar multiplication (int matrix matrix )
+Set function calc prod(matrix, matrix, matrix)
+Set function calc inverse(matrix matrix&)
+Set function print(matrix)
+Start main function 
+   Initialize matrix m1,m2,result
+   Set result.name to string result
+   Set int scalar 
+   Set int option = 1 
+While (ops not equal 9)
+   Print 1. get_matrix 2. get_scaler  3. calc_sum  4. calc_diff 5. scalar_mult 6. calc_prod 7.   calc_inv 8. print_matrix 9. EXIT program 
+    Print select option 
+    User input option 
+    While option <1 or option >9 
+        Print out of bounds 
+        Print select from options 1 - 9 
+       User input option 
+    End while loop 
+    Switch option 
+        Case 1  
+            Print get matrix 
+            Print matrix 1  
+            Call function matrix m1 
+            Print matrix m2 
+            Call matrix m2
+            Break 
+        Case 2 
+            Print get scalar 
+            Call function get scalar 
+            Break 
+        Case 3 
+            Call function calc sum 
+            Call function print 
+            Break 
+        Case 4 
+            Call function calc difference  
+            Call function print 
+            Break 
+        Case 5 
+            Print select matrix 
+            Call function scalar multiplication 
+            Call function print 
+            Call function scalar multiplication 
+            Call print function 
+        Break 
+        Case 6 
+            Call function calc product 
+            Call function print 
+            Break 
+        Case 7 
+            Call function calc inverse 
+            Call function print 
+            Call function inverse 
+            Call function print 
+            Break 
+        Case 8 
+            Print printing matrix 
+            Call function print matrix (m1) 
+            Call function print matrix (m2)
+            Call function print matrix (result )
+            Break 
+        Case 9 
+            Print exiting the program 
+            Return 0
+            Break 
+        End switch
+    End While 
+End main 
+Set  function get matrix (matrix pointer m)
+    Print input name of matrix   
+    User input matrix of name
+    For set i to zero; i less than 2; increment i by 1
+        Print input value for (1,i+1): 
+        User input matrix row 1 [i]
+        Print input value for (2, i+1): 
+        User input matrix row 2 [i]
+    End for loop 
+End Function 
+Set function get scalar (int &k )
+    Print enter a scalar value 
+    User input k 
+end function 
+Set function calculate sum (matrix m1,matrix m2,matrix&result)
+    Result.row[0] equal m1.row1[0] add m2.row1[0]
+    Result.row[1] equal  m1.row1[1] add m2.row1[1]
+    Result.row[0] equal m1.row2[0] add m2.row2[0]
+    Result.row[1] equal m1.row2[1] add m2.row2[1]
+End function 
+Set function calc difference (matrix m1, matrix m2, matrix&result )
+Result.row[0] equal m1.row1[0] subtract m2.row1[0]
+Result.row[1] equal  m1.row1[1] subtract m2.row1[1]
+ Result.row[0] equal m1.row2[0] subtract m2.row2[0]
+Result.row[1] equal m1.row2[1] subtract m2.row2[1]
+End Function
+Set function scalar multiplication 
+For set i to zero; i less than 2; increment i by 1 
+Result.row1[i] equal k *matrixrow1[i]
+Result.row2[i] equals k times m.row2[i]
+End for loop 
+End function 
+Set calc prod function( matrix m1,matrix m2,matrix&result)
+Result row1[0] = matrix1 row1[0] * matrix2 row1[0] add matrix1.row1[1]*matrix2 row2[0];
+Result row1[0] = matrix1 row1[0] * matrix2 row1[0] add matrix1.row1[1]*matrix2 row2[0];
+Result row1[1] = matrix1 row1[0] * matrix2 row1[1] add matrix1.row1[1]*matrix2 row2[1];
+Result row1[1] = matrix1 row1[0] * matrix2 row1[1] add matrix1.row1[1]*matrix2 row2[1];
+End function 
+Set function calc inverse(matrix m , matrix&r)
+Set int d 
+d equals 1/((matrixrow[0]*matrixrow2[1])*(matrix.row1[1]*matrix.row2[0]))
+Result.row1[0] equals matrix row1[0]*d
+Result.row1[1] equals matrix row1[1]*d
+Result.row2[0] equals matrix row2[0]*d
+Result.row2[1] equals matrix row2[1]*d
+End function 
+Set function print matrix (matrix&m)
+Print matrix name matrix.name 
+For set i to zero; i less than 2; increment i by 1 
+Print (matrixrow1[i]) 
+End loop 
+Skip the line
+For set i to zero; i less than 2; increment i by 1
+Print out second row of matrix at i index
+End loop
+End function
