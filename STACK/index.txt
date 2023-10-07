@@ -1,94 +1,94 @@
-Program library
-
-Namespace
-
-Initialize struct Stack
-  set int array[15] initialize with NULL values;
-  set int top -1
-  Start contructor with no argument
-    Start For loop int i from 0 to 14
-      array at i index to null
-    End For loop
-  End constructor
-End struct stack
-
-set function push
-set function pop
-set function top
-set function print
-set function validation for integer
-set function validation for char
-
-Start main function
-  initialize option variable to empty string
-  while option is not E or not e
-    Initialize stack  
-      While option is not D or E
-      invoke validation parameter opt
-      Switch option
-        case A push
-          invoke push function parameter stack
-          end case
-        case B pop
-          invoke pop function
-          end case
-        case C top
-          invoke top function
-          end case
-      End Switch
-      invoke print function
-    End while loop
-  End while loop
-End main
-
-Start push function argument reference of stack
-  if the top is less then 14;
-    print string "Enter a number between 0 and 99 to push to the stack"
-    invoke validation function save return value
-    increment top by one
-    save to returned value from validation into stack at top index
-  else print "stack is full"
-End push function
-
-Start pop function argument reference of stack
-  if top is bigger then -1
-    pop value at top index
-    decrement top by one
-  else print "Error underflow, stack is Empty"
-End pop function
-
-Start top function
-  if top is bigger then -1
-    print stack at top index
-  else print "there is no element in stack
-End pop function
-
-Start print function argment reference of stack
-  print ---
-  for loop from i = 0 to i is less then top increment by one
-    print "|" + stack at "|"
-  End for loop
-  print ---
-End print function
-
-Start validation function no argument
-  while loop until break;
-  cin value from a user
-  if cin value is not integer ask again
-  if correct return the value
-  print "Wrong input try again"
-  End while loop
-End validation function 
-
-Start validation function argument char opt reference
-  while loop until break
-    cin opt
-    if (utf char num is larger then 64 and less then 70)
-    return opt
-    if larger then 96 and less 101
-    return opt - 32
-    print "Wrong input try again"
-  End while loop 
-End validation function 
+01. Program library
+02.  
+03. Namespace
+04. 
+05. Initialize struct Stack
+06.   set int array[15] initialize with NULL values;
+07.   set int top -1
+08.   Start contructor with no argument
+09.     Start For loop int i from 0 to 14
+10.       array at i index to null
+11.     End For loop
+12.   End constructor
+13. End struct stack
+14. 
+15. set function push
+16. set function pop
+17. set function top
+18. set function print
+19. set function validation for integer
+20. set function validation for char
+21. 
+22. Start main function
+23.   initialize option variable to empty string
+24.   while option is not E or not e
+25.     Initialize stack  
+26.       While option is not D or E
+27.       invoke validation parameter opt
+28.       Switch option
+29.         case A push
+30.           invoke push function parameter stack
+31.           end case
+32.         case B pop
+33.           invoke pop function
+34.           end case
+35.         case C top
+36.           invoke top function
+37.           end case
+38.       End Switch
+39.       invoke print function
+40.     End while loop
+41.   End while loop
+42. End main
+43. 
+44. Start push function argument reference of stack
+45.   if the top is less then 14;
+46.     print string "Enter a number between 0 and 99 to push to the stack"
+47.     invoke validation function save return value
+48.     increment top by one
+49.     save to returned value from validation into stack at top index
+50.   else print "stack is full"
+51. End push function
+52. 
+53. Start pop function argument reference of stack
+54.   if top is bigger then -1
+55.     pop value at top index
+56.     decrement top by one
+57.   else print "Error underflow, stack is Empty"
+58. End pop function
+59. 
+60. Start top function
+61.   if top is bigger then -1
+62.     print stack at top index
+63.   else print "there is no element in stack
+64. End pop function
+65. 
+66. Start print function argment reference of stack
+67.   print ---
+68.   for loop from i = 0 to i is less then top increment by one
+69.     print "|" + stack at "|"
+70.   End for loop
+71.   print ---
+72. End print function
+73. 
+74. Start validation function no argument
+75.   while loop until break;
+76.   cin value from a user
+77.   if cin value is not integer ask again
+78.   if correct return the value
+79.   print "Wrong input try again"
+80.   End while loop
+81. End validation function 
+82. 
+83. Start validation function argument char opt reference
+84.   while loop until break
+85.     cin opt
+86.     if (utf char num is larger then 64 and less then 70)
+87.     return opt
+88.     if larger then 96 and less 101
+89.     return opt - 32
+90.     print "Wrong input try again"
+91.   End while loop 
+92. End validation function 
 
 github link https://github.com/tk-0311/BCC
