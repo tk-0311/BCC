@@ -1,0 +1,169 @@
+Last login: Sun Oct  8 02:13:32 on ttys000
+tk-0311 STACK $ c++ index.cpp
+tk-0311 STACK $ ./a.out      
+Items on the Stack
+----
+----
+Menu
+ A: Push
+ B: Pop
+ C: Top
+ D: Purge
+ E: Exit
+
+B
+Error underflow, stack is Empty
+Menu
+ A: Push
+ B: Pop
+ C: Top
+ D: Purge
+ E: Exit
+
+A
+Enter a number between 0 and 99 to push to the stack: 1
+Items on the Stack
+----
+|01|
+----
+Menu
+ A: Push
+ B: Pop
+ C: Top
+ D: Purge
+ E: Exit
+
+A
+Enter a number between 0 and 99 to push to the stack: 200
+Wrong input try again
+Enter a number between 0 and 99 to push to the stack: 20
+Items on the Stack
+----
+|01|
+|20|
+----
+Menu
+ A: Push
+ B: Pop
+ C: Top
+ D: Purge
+ E: Exit
+
+C
+Top of the Stack
+----
+|20|
+----
+Menu
+ A: Push
+ B: Pop
+ C: Top
+ D: Purge
+ E: Exit
+
+B
+20 is popped.
+Items on the Stack
+----
+|01|
+----
+Menu
+ A: Push
+ B: Pop
+ C: Top
+ D: Purge
+ E: Exit
+
+B
+1 is popped.
+Items on the Stack
+----
+----
+Menu
+ A: Push
+ B: Pop
+ C: Top
+ D: Purge
+ E: Exit
+
+b
+Error underflow, stack is Empty
+Menu
+ A: Push
+ B: Pop
+ C: Top
+ D: Purge
+ E: Exit
+
+A
+Enter a number between 0 and 99 to push to the stack: 1
+Items on the Stack
+----
+|01|
+----
+Menu
+ A: Push
+ B: Pop
+ C: Top
+ D: Purge
+ E: Exit
+
+A
+Enter a number between 0 and 99 to push to the stack: 2
+Items on the Stack
+----
+|01|
+|02|
+----
+Menu
+ A: Push
+ B: Pop
+ C: Top
+ D: Purge
+ E: Exit
+
+A
+Enter a number between 0 and 99 to push to the stack: 3
+Items on the Stack
+----
+|01|
+|02|
+|03|
+----
+Menu
+ A: Push
+ B: Pop
+ C: Top
+ D: Purge
+ E: Exit
+
+A  
+Enter a number between 0 and 99 to push to the stack: 98
+Items on the Stack
+----
+|01|
+|02|
+|03|
+|98|
+----
+Menu
+ A: Push
+ B: Pop
+ C: Top
+ D: Purge
+ E: Exit
+
+D
+Purge stack
+Items on the Stack
+----
+----
+Menu
+ A: Push
+ B: Pop
+ C: Top
+ D: Purge
+ E: Exit
+
+E
+tk-0311 STACK $ 
