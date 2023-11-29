@@ -3,7 +3,7 @@
 using namespace std;
 
 struct Stack {
-  int arr[15];
+  int arr[5];
   int top;
   Stack() {
     top = -1;
@@ -48,7 +48,7 @@ int main() {
 };
 
 void push(Stack* s) {
-  if (s->top < 14) {
+  if (s->top < 4) {
     cout << "Enter a number between 0 and 99 to push to the stack: ";
     int value = validation();
     s->top += 1;

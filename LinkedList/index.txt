@@ -1,0 +1,160 @@
+01.   Program library
+02.    
+03.   Namespace
+04.   
+05.   set class object LinkedList
+06.     set struct Node
+07.       initialize int id
+08.       initialize double gpa
+09.       initialize string name
+10.       set Node type outerpointer variable "next"
+11.     End struct Node
+12.     set Node Type outerpointer variable "head"
+13.     start contrustor argment none
+14.     End Constructor
+15  
+16.     start deconstructor argment none
+17.       set Node outerpointer variable current to head
+18.       start while loop while current is not equal to null
+19.         set Node outerpointer variable temp to current
+20.         current to current.next
+21.         delete temp;
+22.       End while loop
+23.     End deconstructor
+24.     
+25.     Start Add method 
+26.       instanciate new Node newNode
+27.       cin value from user to newNode.id
+28.       cin value from user to newNode.gpa
+29.       cin value from user to newNode.name
+30.       set Node type outerpointer cur to head
+31.       if head = null
+32.       then head = pointer to newNode
+33.       if head not null
+34.         set cur = head;
+35.         start loop while cur->next not null
+36.           cur = cur.next
+37.         End while loop
+38.         cur.next = pointer to newNode
+39.     End Add method
+40.     
+41.     Start Delete method
+42.       set cur = head
+43.       set temp = cur->next
+44.       Start loop while temp->next != null
+45.         cur = cur->next
+46.         temp = cur->next
+34.       End loop
+35.       Delete temp
+36.       cur->next = null pointer
+37.     End Delete meothd 
+38.     
+45.     Start Display method
+47.       set cur = head
+48.       Start loop while cur != nullptr
+49.         display student id student name student gpa 
+50.         cur = cur->next
+51.       End while loop
+52.     End Display method
+53.     
+54.     Start Modify method
+55.       initialize int id
+56.       initialize node = head
+61.       print please enter id
+57.       cin user input to id
+58.       Start loop while node->id != id or node != nullptr
+59.         node = node->next
+62.       end while loop
+63.       if node == nullptr
+64.         Print there is no matching id
+65.       else
+66.         initialize double gpa
+00.         initialize string name
+67.         Print please enter GPA
+68.         cin user input to gpa
+69.         Print plese enter Name
+70.         cin user input to name
+71.         Print we found matching ID. endl;
+72.         Print ID GPA Name of found node
+73.         set Node->gpa = gpa
+74.         set Node->name = name
+75.         Print the ID info has been modified like below. endl;
+76.         Print ID GPA NAME of modified node.
+77.     End Modify
+78.   
+79.     Start Purge method
+80.       initialize Nodeptr cur = head
+81.       initialize temp
+82.       while cur != null
+83.       temp = cur->next
+84.       delete cur
+85.       cur = temp
+86.       End while loop
+87.       head = nullptr
+88.     End Purge method
+89.     
+90.     Start search method
+91.       initialize int id
+92.       if head != null
+93.         initialize Nodeptr cur = head
+94.         print Please enter ID:
+95.         cin user input to id
+96.         Start while loop cur->id != id or cur != nullptr
+97.           cur = cur->next
+98.         End while loop
+99.       if cur != nullptr
+100.        print We found mathcing ID. endl
+970.        print ID GPA and NAME of cur
+980.      else
+990.        print No matching ID exist.
+100.    End search method
+101.  End LinkedList class
+100.  
+102.  Start Main function
+103.    initialize LinkedList ll = nullptr
+104.    initialize int choice;
+105.    While (choice !=8)
+106.      print Enter Command
+107.      print 1. Create/n2. Add/n3. Delete/n4. Display/n5. Modify/n6. Purge entire list/n7. Search for node/n8. Exit/n
+100.
+100.    Start switch option 
+100.      case 1
+100.        if ll != nullptr
+100.          Print Linked List is already created 
+100.        else 
+100.        ll = new instance of LinkedList()
+100.      case 2
+100.        if ll = nullptr
+100.          print Create Linked list first.
+100.        else 
+100.        ll.Add()
+100.      case 3
+100.        if ll = nullptr
+100.          print Create Linked list first.
+100.        else 
+100.        ll.Add()
+100.      case 4
+100.        if ll = nullptr
+100.          print Create Linked list first.
+100.        else 
+100.        ll.Add()
+100.      case 5
+100.        if ll = nullptr
+100.          print Create Linked list first.
+100.        else 
+100.        ll.Add()
+100.      case 6
+100.        if ll = nullptr
+100.          print Create Linked list first.
+100.        else 
+100.        ll.Add()
+100.      case 7
+100.        if ll = nullptr
+100.          print Create Linked list first.
+100.        else 
+100.        ll.Add()
+100.    End while loop
+100.    delete ll
+100.  End Main function.
+
+github 
