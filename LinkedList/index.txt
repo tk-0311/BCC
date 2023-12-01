@@ -30,7 +30,7 @@
 30.       set Node type outerpointer cur to head
 31.       if head = null
 32.       then head = pointer to newNode
-33.       if head not null
+33.       else
 34.         set cur = head;
 35.         start loop while cur->next not null
 36.           cur = cur.next
@@ -93,7 +93,7 @@
 87.       head = nullptr
 88.     End Purge method
 89.     
-90.     Start search method
+90.     Start Search method
 91.       initialize int id
 92.       if head != null
 93.         initialize Nodeptr cur = head
