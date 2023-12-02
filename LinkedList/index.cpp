@@ -2,20 +2,7 @@
 #include <LL.h>
 using namespace std;
 
-int validateChoice() {
-  int choice;
-    while(true) {
-      cin >> choice;
-      if (cin.fail() || 0 > choice || choice > 8){
-        cout << "\033[31mPlease enter a valid choice 1-8!\033[0m" << endl;
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-      }else{
-        break;
-      }
-    };
-    return choice;
-}
+int validateChoice();
 
 int main() {
   LinkedList* ll = nullptr;
@@ -76,6 +63,21 @@ int main() {
         }
         break;
     }
-
   }
+  delete ll;
+}
+
+int validateChoice() {
+  int choice;
+    while(true) {
+      cin >> choice;
+      if (cin.fail() || 0 > choice || choice > 8){
+        cout << "\033[31mPlease enter a valid choice 1-8!\033[0m" << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+      }else{
+        break;
+      }
+    };
+    return choice;
 }

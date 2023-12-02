@@ -74,6 +74,7 @@ void LinkedList::Add(){
     if (head->ID > newNode->ID) {
       head = newNode;
       newNode->next = cur;
+      cout << "\033[32mNew list is added.\033[0m" << endl;
     }else {
       while (cur->next != nullptr){
         if (cur->next->ID > newNode->ID) {
@@ -96,7 +97,7 @@ void LinkedList::Add(){
   }
   
 };
-void LinkedList::Delete(){
+void LinkedList::Delete(){ 
   
   if (head == nullptr) {
       cout << "\033[31mLinked List is Empty!\033[0m" << endl;
