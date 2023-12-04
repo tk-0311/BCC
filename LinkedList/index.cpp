@@ -7,6 +7,7 @@ int validateChoice();
 int main() {
   LinkedList* ll = nullptr;
   int choice;
+
   while (choice != 8) {
     cout << "Enter Command\n";
     cout << "1. Create\n2. Add\n3. Delete\n4. Display\n5. Modify\n6. Purge entire list\n7. Search for a Node\n8. Exit\n";

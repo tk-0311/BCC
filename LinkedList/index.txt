@@ -1,160 +1,326 @@
-01.   Program library
-02.    
-03.   Namespace
-04.   
-05.   set class object LinkedList
-06.     set struct Node
-07.       initialize int id
-08.       initialize double gpa
-09.       initialize string name
-10.       set Node type outerpointer variable "next"
-11.     End struct Node
-12.     set Node Type outerpointer variable "head"
-13.     start contrustor argment none
-14.     End Constructor
-15  
-16.     start deconstructor argment none
-17.       set Node outerpointer variable current to head
-18.       start while loop while current is not equal to null
-19.         set Node outerpointer variable temp to current
-20.         current to current.next
-21.         delete temp;
-22.       End while loop
-23.     End deconstructor
-24.     
-25.     Start Add method 
-26.       instanciate new Node newNode
-27.       cin value from user to newNode.id
-28.       cin value from user to newNode.gpa
-29.       cin value from user to newNode.name
-30.       set Node type outerpointer cur to head
-31.       if head = null
-32.       then head = pointer to newNode
-33.       else
-34.         set cur = head;
-35.         start loop while cur->next not null
-36.           cur = cur.next
-37.         End while loop
-38.         cur.next = pointer to newNode
-39.     End Add method
-40.     
-41.     Start Delete method
-42.       set cur = head
-43.       set temp = cur->next
-44.       Start loop while temp->next != null
-45.         cur = cur->next
-46.         temp = cur->next
-34.       End loop
-35.       Delete temp
-36.       cur->next = null pointer
-37.     End Delete meothd 
-38.     
-45.     Start Display method
-47.       set cur = head
-48.       Start loop while cur != nullptr
-49.         display student id student name student gpa 
-50.         cur = cur->next
-51.       End while loop
-52.     End Display method
-53.     
-54.     Start Modify method
-55.       initialize int id
-56.       initialize node = head
-61.       print please enter id
-57.       cin user input to id
-58.       Start loop while node->id != id or node != nullptr
-59.         node = node->next
-62.       end while loop
-63.       if node == nullptr
-64.         Print there is no matching id
-65.       else
-66.         initialize double gpa
-00.         initialize string name
-67.         Print please enter GPA
-68.         cin user input to gpa
-69.         Print plese enter Name
-70.         cin user input to name
-71.         Print we found matching ID. endl;
-72.         Print ID GPA Name of found node
-73.         set Node->gpa = gpa
-74.         set Node->name = name
-75.         Print the ID info has been modified like below. endl;
-76.         Print ID GPA NAME of modified node.
-77.     End Modify
-78.   
-79.     Start Purge method
-80.       initialize Nodeptr cur = head
-81.       initialize temp
-82.       while cur != null
-83.       temp = cur->next
-84.       delete cur
-85.       cur = temp
-86.       End while loop
-87.       head = nullptr
-88.     End Purge method
-89.     
-90.     Start Search method
-91.       initialize int id
-92.       if head != null
-93.         initialize Nodeptr cur = head
-94.         print Please enter ID:
-95.         cin user input to id
-96.         Start while loop cur->id != id or cur != nullptr
-97.           cur = cur->next
-98.         End while loop
-99.       if cur != nullptr
-100.        print We found mathcing ID. endl
-970.        print ID GPA and NAME of cur
-980.      else
-990.        print No matching ID exist.
-100.    End search method
-101.  End LinkedList class
-100.  
-102.  Start Main function
-103.    initialize LinkedList ll = nullptr
-104.    initialize int choice;
-105.    While (choice !=8)
-106.      print Enter Command
-107.      print 1. Create/n2. Add/n3. Delete/n4. Display/n5. Modify/n6. Purge entire list/n7. Search for node/n8. Exit/n
-100.
-100.    Start switch option 
-100.      case 1
-100.        if ll != nullptr
-100.          Print Linked List is already created 
-100.        else 
-100.        ll = new instance of LinkedList()
-100.      case 2
-100.        if ll = nullptr
-100.          print Create Linked list first.
-100.        else 
-100.        ll.Add()
-100.      case 3
-100.        if ll = nullptr
-100.          print Create Linked list first.
-100.        else 
-100.        ll.Add()
-100.      case 4
-100.        if ll = nullptr
-100.          print Create Linked list first.
-100.        else 
-100.        ll.Add()
-100.      case 5
-100.        if ll = nullptr
-100.          print Create Linked list first.
-100.        else 
-100.        ll.Add()
-100.      case 6
-100.        if ll = nullptr
-100.          print Create Linked list first.
-100.        else 
-100.        ll.Add()
-100.      case 7
-100.        if ll = nullptr
-100.          print Create Linked list first.
-100.        else 
-100.        ll.Add()
-100.    End while loop
-100.    delete ll
-100.  End Main function.
+Data Struc & Algor (CIS-277-601HY) 
+Professor Faisal Aljamal
+Timothy Mugyeong Kwon 
 
-github 
+Index.cpp
+
+Include program library iostream 
+Include LinkedList header file  
+Use namespace std
+
+Set function validateChoice with no parameter
+
+Start main function
+  initialize LinkedList ll outerpointer as nullptr;
+  initialize int choice
+
+  Start loop while choice != 8
+    print Enter Command\n
+    print "1. Create\n2. Add\n3. Delete\n4. Display\n5. Modify\n6. Purge entire list\n7. Search for a Node\n8. Exit\n";
+    select choice validate choice with validateChoice function
+    Switch Option
+      case 1 create linked list
+        if ll is not nullptr
+          print Linked List is already created
+        else 
+          set ll to new instance of LinkedList
+          print Linked List is created
+        end if 
+        break;
+      case 2 Add
+        if ll is nullptr
+          print Create linked List first
+        else 
+          invoke ll.Add method
+        end if 
+        break;
+      case 3 Delete
+        if ll is nullptr
+          print Create linked List first
+        else 
+          invoke ll.Delete method
+        end if 
+        break;
+      case 4 Display
+        if ll is nullptr
+          print Create linked List first
+        else 
+          invoke ll.Display method
+        end if 
+        break;
+      case 5 Modify
+        if ll is nullptr
+          print Create linked List first
+        else 
+          invoke ll.Modify method
+        end if 
+        break;
+      case 6 Purge
+        if ll is nullptr
+          print Create linked List first
+        else 
+          invoke ll.Purge method
+        end if 
+        break;
+      case 7 Search
+        if ll is nullptr
+          print Create linked List first
+        else 
+          invoke ll.Search method
+        end if 
+        break; 
+    End Switch 
+  End while loop
+  delete ll
+End main function
+
+Start validateChoice function argument none return int
+  set int choice
+  Start loop while true
+    save user input to choice variable
+    if cin.fails or 0 > choice or choice > 8
+      Print Please enter a valid choice 1-8!
+      clear user input
+      ignore entire line of input
+    else
+      break out of while loop
+    End if
+  End while loop
+  return choice
+End validateChoice function
+
+
+LL.h
+
+include string from cpp library
+
+Start define class LinkedList
+  private variables
+    Start define struct Node
+      set int ID
+      set double GPA
+      set string NAME
+      set Node outerpointer next
+      Start Node constructor parameter: int id, double gpa, string name
+       Node.ID = id
+        Node.GPA = gpa
+        Node.NAME = name
+        Node.next = nullptr
+      End Node constructor
+    End struct Node definition
+    set Node outerpointer head
+    set method int validateID
+    set method double validateGPA
+    set method string validateName
+  public
+    set LinkedList constructor
+    set LinkedList deconstructor
+    set void method Add
+    set void method Delete
+    set void method Display
+    set void method Modify
+    set void method Purge
+    set void method Search
+End class definition 
+
+
+LinkedList.cpp    
+
+include LL.h header file
+include program library
+
+use namespace std;
+
+//Private method
+Start define LinkedList method validateID parameter none returns int
+  set int id
+  Start loop while true
+    Print Please Enter ID:
+    Input from user to id
+    if invalid user input
+      Print Please enter a valid ID!
+      clear user input
+      ignore entire line of input 
+    else 
+      break out of while loop
+    end if
+  End while loop
+  return id
+End validateID method
+Start define LinkedList method validateGPA parameter none returns double
+  set double gpa
+  Start loop while true
+    Print Please Enter gpa:
+    Input from user to gpa
+    if invalid user input
+      Print Please enter a valid GPA!
+      clear user input
+      ignore entire line of input 
+    else 
+      break out of while loop
+    end if 
+  End while loop
+  return GPA
+End validateGPA method
+Start define LinkedList method validateName parameter none returns string
+  set string name
+  Start loop while true
+    Print Please Enter Name:
+    ignore previous line of input
+    whole line of input from user to name
+    if invalid user input
+      Print Please enter a valid Name!
+      clear user input
+      ignore entire line of input 
+    else 
+      break out of while loop
+    end if
+  End while loop
+  return name
+End validateName method
+
+//public
+LinkedList construstor argment none default constructor
+Start define LinkedList deconstructor arguement none
+  set Node outerpointer cur = head
+  Start while cur != nullptr
+    Node outerpointer temp = cur
+    cur = cur->next
+    delete temp
+  End while loop
+End deconstructor
+Start LinkedList Add method argment none returns void
+  set int id = return value of validateID
+  set double gpa = return value of validateGPA
+  set string name = return value of validateName
+  set Node outerpointer newNode = new instance of Node with argument id,gpa,name
+  if head is nullptr
+    head = newNode
+    Print New list is added.
+  else 
+    set Node outerpointer cur = head;
+    if head->ID > newNode->ID
+      head = newNode
+      newNode->next = cur
+      Print New list is added.  
+    else
+      Start loop while cur->next != nullptr
+        if cur->next->ID > newNode->ID
+          break out of loop
+        else
+          cur equal to cur->next
+        end if
+      End while loop
+      if cur->ID == newNode->ID
+        Print duplicate ID found. Please enter other ID
+        delete newNode;
+      else
+        set Node outerpointer temp = cur->next;
+        cur->next = newNode
+        newNode->next = temp
+        Print New list is added.
+      End if
+    End if 
+  End if
+End LinkedList Add method
+Start LinkedList Delete method argment none returns void
+  if head is nullptr
+    Print Linked list is empty
+  else
+    invoke LinkedList Display method;
+    set int id = return value of validateID()
+    if head->ID is equal to id
+      set Node outerpointer temp = head
+      set Node outerpointer next = head.next
+      delete temp
+      head = next;
+      Print List is deleted
+    else
+      set Node outerpointer prev = head
+      set Node outerpointer cur = prev->next
+      Start loop while cur->next != nullptr
+        if cur->ID equal to ID
+          break
+        else
+          prev = prev->next
+          cur = cur->next
+        End if
+      End while loop
+      if cur->ID not equal to id
+        Print No Matching ID found!
+      else 
+        set Node outerpointer temp1 = cur
+        cur = cur->next
+        delete temp1
+        prev->next = cur
+        Print List is deleted
+      End if
+    End if
+  End if
+End LinkedList Delete method
+Start LinkedList Display method argment none returns void
+  if head is nullptr
+    Print Linked list is empty
+  else
+    Node outerpointer cur = head
+    Start while loop cur not equal to nullptr
+      Print ID: cur->ID | GPA: cur->GPA | Name: cur->NAME
+      cur = cur->next
+    End while loop
+  End if 
+End LinkedList Display method
+Start LinkedList Modify method argment none returns void
+  if head is nullptr
+    Print Linked list is empty
+  else
+    set int id equal to return of validateID function
+    set double gpa equal to return of validateGPA function
+    set string name equal to reutrn of validateName function
+    set Node outerpointer cur = head;
+    Start loop while cur != nullptr
+      if cur->ID equal to id
+        Print "\033[32mWe found matching ID." endl "ID: " << cur->ID << " | GPA: " << cur->GPA << " | NAME: " << cur->NAME << endl << endl
+        cur->GPA = gpa
+        cur->NAME = name
+        Print cout << "ID: " << cur->ID << " | GPA: " << cur->GPA << " | NAME: " << cur->NAME << "\033[0m" << endl;
+        break out of while loop
+      else
+        cur = cur->next
+      end if
+    End while loop
+    ternary operation is cur equal to nullptr True: Print "\033[31mID was not found\033[0m" << endl False: Print endl
+  End if
+End LinkedList Modify method
+Start LinkedList Purge method argment none returns void
+  if head is nullptr
+    Print Linked list is empty in red color
+  else
+    Set Node outerpointer cur = head
+    Start loop while cur not equal to nullptr
+      set Node outerpointer temp = cur
+      cur = cur->next
+      delete temp
+      Print List is deleted in red color
+    End while loop
+  head = nullptr;
+  Print We successfully purged the linked list! in green color
+  End if
+End LinkedList Purge method
+Start LinkedList Search method argment none returns void
+  if head is nullptr
+    Print Linked list is empty in red color
+  else
+    set int id equal to return of validateID function
+    set Ndoe outerpointer to head
+    Start loop while cur not equal to nullptr
+      if cur->ID equal to id
+        Print We found mathcing ID. in green color
+        Print ID: cur->ID | GPA: cur->GPA | NAME: cur->NAME in green color
+        break out of loop
+      else
+        cur = cur->next
+      End if
+    End while loop
+  End if
+  ternary operation is cur equal to nullptr True: Print ID was not found in red color False: Print endl
+End LinkedList Search method

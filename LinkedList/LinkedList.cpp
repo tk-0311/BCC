@@ -5,20 +5,20 @@ using namespace std;
 
 //Private
 int LinkedList::validateID(){
-    int id;
-    while(true) {
-      cout << "\033[32mPlease Enter ID: \033[0m";
-      cin >> id;
-      if (cin.fail()){
-        cout << "\033[31mPlease enter a valid ID!\033[0m" << endl;
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-      }else {
-        break;
-      }
-    };
-    return id;
+  int id;
+  while(true) {
+    cout << "\033[32mPlease Enter ID: \033[0m";
+    cin >> id;
+    if (cin.fail()){
+      cout << "\033[31mPlease enter a valid ID!\033[0m" << endl;
+      cin.clear();
+      cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }else {
+      break;
+    }
   };
+  return id;
+};
 double LinkedList::validateGPA(){
     double gpa;
     while(true) {
@@ -33,12 +33,12 @@ double LinkedList::validateGPA(){
       }
     };
     return gpa;
-  };
+};
 string LinkedList::validateName() {
     string name;
     while(true) {
       cout << "\033[32mPlease Enter Name: \033[0m";
-      cin.ignore();
+      cin.ignore(numeric_limits<streamsize>::max(), '\n');
       getline(cin,name);
       if (cin.fail()){
         cout << "\033[31mPlease enter a valid Name!\033[0m" << endl;
@@ -79,8 +79,9 @@ void LinkedList::Add(){
       while (cur->next != nullptr){
         if (cur->next->ID > newNode->ID) {
           break;
+        }else{
+          cur = cur->next;  
         }
-        cur = cur->next;
       }
       if (cur->ID == newNode->ID) {
         cout << "\033[31mDuplicate ID found. Please enter other ID \033[0m" << endl;
@@ -91,14 +92,10 @@ void LinkedList::Add(){
         newNode->next = temp;
         cout << "\033[32mNew list is added.\033[0m" << endl;
       }
-      
     }
-    
   }
-  
 };
 void LinkedList::Delete(){ 
-  
   if (head == nullptr) {
       cout << "\033[31mLinked List is Empty!\033[0m" << endl;
   }else{
@@ -116,9 +113,10 @@ void LinkedList::Delete(){
       while(cur->next != nullptr){
         if (cur->ID == id) {
           break;
+        }else{
+          prev = prev->next;
+          cur= cur->next;  
         }
-        prev = prev->next;
-        cur= cur->next;
       };
       if (cur->ID != id) {
         cout << "\033[31mNo Matching ID found!\033[0m" << endl;
@@ -175,7 +173,7 @@ void LinkedList::Purge(){
     cur = cur->next;
     delete temp;
     cout << "\033[31mList is deleted.\n";
-  }
+    }
   head = nullptr;
   cout << "\033[32mWe successfully purged the linked list!\033[0m" << endl;
   }
